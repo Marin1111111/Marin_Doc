@@ -1,0 +1,298 @@
+body {
+  font-family: 'Arial, sans-serif';
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+  padding-top: -10px;
+}
+
+#header a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+#header img {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000;
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+}
+
+#main {
+  text-align: left;
+  padding: 40px 0;
+}
+
+#main h1 {
+  font-family: Helvetica;
+  font-size: 2.5em;
+  line-height: 0.9em;
+  margin: 0;
+  padding: 20px;
+}
+
+#main h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 4em;
+  letter-spacing: 0em;
+  line-height: 0.9em;
+  margin: 0;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+#main h3 {
+  font-family: 'Times New Roman', serif;
+  font-size: 2em;
+  letter-spacing: 0em;
+  line-height: 0.9em;
+  margin: 0;
+  margin-top: 50px;
+}
+
+#main h4 {
+  font-family: 'Times New Roman', serif;
+  font-size: 1em;
+  letter-spacing: 0em;
+  line-height: 0.9em;
+  margin: 0;
+  margin-top: 50px;
+}
+
+#main h5 {
+  font-family: 'Times New Roman', serif;
+  font-size: 1em;
+  letter-spacing: 0em;
+  line-height: 0.9em;
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+#main a {
+  font-family: 'Times New Roman', serif;
+  font-size: 1em;
+  letter-spacing: 0em;
+  line-height: 0.9em;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#main a:hover {
+  text-decoration: underline;
+}
+
+#titles {
+  text-align: left;
+  padding-left: 15px;
+  padding-bottom: 40px;
+}
+
+#main p {
+  margin-top: 75px;
+  text-align: left;
+}
+
+.images-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0 20px;
+  gap:25px;
+}
+
+.images-row a img {
+  width: 100%;
+  height: auto;
+}
+
+.images-row a:hover {
+  opacity: 80%;
+}
+
+.divider {
+  width: 90%;
+  height: 1px;
+  background: #000;
+  margin-top: 5%; /* 可根据需要调整 */
+  margin-bottom: 2%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 3%;
+  margin-right: 8%;
+  align-items: flex-end;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact p3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .images-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .images-row a {
+    margin: 10px 0;
+  }
+}
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .images-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .images-row a {
+    margin: 10px 0;
+  }
+}
+
+
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
+/* Lightbox styles */
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  outline: none;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 0.01px;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../images/loading.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  position: absolute; /* 确保元素绝对定位 */
+  top: 0; /* 垂直居中 */
+  width: 50px; /* 设置宽度，使按钮靠近图片两侧 */
+  z-index: 10001; /* 确保按钮在其他元素之上 */
+}
+
+.lb-nav a.lb-prev {
+  background: url(../images/prev.png) left 50% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition:
